@@ -19,23 +19,18 @@
     }
 
     h1 {
-      font-size: 22px;
+      font-size: 24px;
       margin: 0 0 20px;
     }
 
     h2 {
       font-size: 18px;
-      margin: 0 0 12px;
+      margin: 28px 0 12px;
     }
 
-    .section {
-      margin-bottom: 28px;
-    }
-
-    .section-title {
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 12px;
+    p.section-text {
+      margin: 0 0 16px;
+      opacity: 0.8;
     }
 
     .list {
@@ -73,76 +68,28 @@
       font-size: 18px;
       opacity: 0.6;
       margin-left: 12px;
+      flex-shrink: 0;
     }
 
-    .faq-list {
-      display: grid;
-      gap: 12px;
-    }
-
-    details {
+    .faq-card {
       border: 1px solid #e6e6e6;
       border-radius: 10px;
       padding: 0;
-      background: #fff;
       overflow: hidden;
+      background: #fff;
     }
 
-    summary {
-      list-style: none;
-      cursor: pointer;
-      padding: 14px;
-      font-weight: 600;
+    .faq-link {
       display: flex;
       justify-content: space-between;
       align-items: center;
-    }
-
-    summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .summary-text {
-      display: flex;
-      gap: 8px;
-      align-items: flex-start;
-    }
-
-    .faq-number {
-      min-width: 20px;
-      opacity: 0.7;
-    }
-
-    .faq-arrow {
-      font-size: 18px;
-      opacity: 0.6;
-      margin-left: 12px;
-    }
-
-    details[open] .faq-arrow {
-      transform: rotate(90deg);
-    }
-
-    .faq-content {
-      padding: 0 14px 14px;
-      font-size: 14px;
-      line-height: 1.5;
-      border-top: 1px solid #f0f0f0;
-    }
-
-    .faq-content p {
-      margin: 12px 0 0;
-    }
-
-    .faq-content img {
-      width: 100%;
-      height: auto;
-      margin-top: 12px;
-      border-radius: 8px;
+      padding: 14px;
+      text-decoration: none;
+      color: inherit;
     }
 
     .footer {
-      margin-top: 20px;
+      margin-top: 24px;
       font-size: 12px;
       opacity: 0.7;
     }
@@ -152,118 +99,42 @@
   <div class="container">
     <h1>Help Centre</h1>
 
-    <div class="section">
-      <div class="section-title">Select a guide:</div>
+    <h2>Select a guide:</h2>
+    <div class="list">
+      <a class="item" href="picking.html">
+        <div>
+          <div class="title">How to pick an order</div>
+          <div class="meta">From starting an order to handoff</div>
+        </div>
+        <div class="arrow">›</div>
+      </a>
 
-      <div class="list">
-        <a class="item" href="picking.html">
-          <div>
-            <div class="title">How to pick an order</div>
-            <div class="meta">From starting an order to handoff</div>
-          </div>
-          <div class="arrow">›</div>
-        </a>
+      <a class="item" href="substitutions.html">
+        <div>
+          <div class="title">How to substitute items in an order</div>
+          <div class="meta">All substitution problems that can occur</div>
+        </div>
+        <div class="arrow">›</div>
+      </a>
 
-        <a class="item" href="substitutions.html">
-          <div>
-            <div class="title">How to substitute items in an order</div>
-            <div class="meta">All substitution problems that can occur</div>
-          </div>
-          <div class="arrow">›</div>
-        </a>
-
-        <a class="item" href="manageissues.html">
-          <div>
-            <div class="title">How to manage specific channel order problems</div>
-            <div class="meta">Problems that occur with Just Eat, Chop Chop and Uber Eats</div>
-          </div>
-          <div class="arrow">›</div>
-        </a>
-      </div>
+      <a class="item" href="manageissues.html">
+        <div>
+          <div class="title">How to manage specific channel order problems</div>
+          <div class="meta">Problems that occur with Just Eat, Chop Chop and Uber Eats</div>
+        </div>
+        <div class="arrow">›</div>
+      </a>
     </div>
 
-    <div class="section">
-      <div class="section-title">FAQ:</div>
-
-      <div class="faq-list">
-        <details>
-          <summary>
-            <div class="summary-text">
-              <span class="faq-number">1.</span>
-              <span>How to identify an order?</span>
-            </div>
-            <span class="faq-arrow">›</span>
-          </summary>
-          <div class="faq-content">
-            <p>Replace this text with your answer for how to identify an order.</p>
-          </div>
-        </details>
-
-        <details>
-          <summary>
-            <div class="summary-text">
-              <span class="faq-number">2.</span>
-              <span>How to keep alerts ringing for new orders?</span>
-            </div>
-            <span class="faq-arrow">›</span>
-          </summary>
-          <div class="faq-content">
-            <p>Replace this text with your answer for how to keep alerts ringing for new orders.</p>
-          </div>
-        </details>
-
-        <details>
-          <summary>
-            <div class="summary-text">
-              <span class="faq-number">3.</span>
-              <span>Why can't I pick this bundle order?</span>
-            </div>
-            <span class="faq-arrow">›</span>
-          </summary>
-          <div class="faq-content">
-            <p>Replace this text with your answer for why a bundle order cannot be picked.</p>
-          </div>
-        </details>
-
-        <details>
-          <summary>
-            <div class="summary-text">
-              <span class="faq-number">4.</span>
-              <span>How to request an extra driver for large orders?</span>
-            </div>
-            <span class="faq-arrow">›</span>
-          </summary>
-          <div class="faq-content">
-            <p>Replace this text with your answer for requesting an extra driver for large orders.</p>
-          </div>
-        </details>
-
-        <details>
-          <summary>
-            <div class="summary-text">
-              <span class="faq-number">5.</span>
-              <span>How to clear old hanging/stuck orders?</span>
-            </div>
-            <span class="faq-arrow">›</span>
-          </summary>
-          <div class="faq-content">
-            <p>Replace this text with your answer for clearing old hanging or stuck orders.</p>
-          </div>
-        </details>
-
-        <details>
-          <summary>
-            <div class="summary-text">
-              <span class="faq-number">6.</span>
-              <span>How to contact support?</span>
-            </div>
-            <span class="faq-arrow">›</span>
-          </summary>
-          <div class="faq-content">
-            <p>Replace this text with your support contact guidance here.</p>
-          </div>
-        </details>
-      </div>
+    <h2>FAQ:</h2>
+    <div class="faq-card">
+      <a class="faq-link" href="faq.html">
+        <div>
+          <div class="title">View frequently asked questions</div>
+          <div class="meta">Order identification, alerts, bundle orders, extra drivers, stuck orders and support</div>
+        </div>
+        <div class="arrow">›</div>
+      </a>
     </div>
 
     <div class="footer">
