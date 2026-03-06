@@ -28,14 +28,10 @@
       margin: 28px 0 12px;
     }
 
-    p.section-text {
-      margin: 0 0 16px;
-      opacity: 0.8;
-    }
-
     .list {
       display: grid;
       gap: 12px;
+      margin-bottom: 8px;
     }
 
     .item {
@@ -71,21 +67,70 @@
       flex-shrink: 0;
     }
 
-    .faq-card {
-      border: 1px solid #e6e6e6;
-      border-radius: 10px;
-      padding: 0;
-      overflow: hidden;
-      background: #fff;
+    .faq-list {
+      display: grid;
+      gap: 12px;
     }
 
-    .faq-link {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    details {
+      border: 1px solid #e6e6e6;
+      border-radius: 10px;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    summary {
+      list-style: none;
+      cursor: pointer;
       padding: 14px;
-      text-decoration: none;
-      color: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-weight: 600;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .summary-text {
+      flex: 1;
+    }
+
+    .dropdown-arrow {
+      font-size: 18px;
+      opacity: 0.6;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    details[open] .dropdown-arrow {
+      transform: rotate(90deg);
+    }
+
+    .answer {
+      padding: 0 14px 14px 14px;
+      border-top: 1px solid #f0f0f0;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .answer p {
+      margin: 12px 0 0;
+    }
+
+    .answer img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-top: 12px;
+      display: block;
+    }
+
+    .placeholder {
+      color: #666;
+      font-style: italic;
     }
 
     .footer {
@@ -119,22 +164,84 @@
 
       <a class="item" href="manageissues.html">
         <div>
-          <div class="title">How to manage specific channel order problems</div>
-          <div class="meta">Problems that occur with Just Eat, Chop Chop and Uber Eats</div>
+          <div class="title">How to manage specific problems</div>
+          <div class="meta">Including problems that occur with Just Eat, Uber Eats and Chop Chop</div>
         </div>
         <div class="arrow">›</div>
       </a>
     </div>
 
     <h2>FAQ:</h2>
-    <div class="faq-card">
-      <a class="faq-link" href="faq.html">
-        <div>
-          <div class="title">View frequently asked questions</div>
-          <div class="meta">Order identification, alerts, bundle orders, extra drivers, stuck orders and support</div>
+    <div class="faq-list">
+      <details>
+        <summary>
+          <span class="summary-text">1. How to identify an order?</span>
+          <span class="dropdown-arrow">›</span>
+        </summary>
+        <div class="answer">
+          <p class="placeholder">Add answer text, image, or both here.</p>
         </div>
-        <div class="arrow">›</div>
-      </a>
+      </details>
+
+      <details>
+        <summary>
+          <span class="summary-text">2. How to keep alerts ringing for new orders?</span>
+          <span class="dropdown-arrow">›</span>
+        </summary>
+        <div class="answer">
+          <p class="placeholder">Add answer text, image, or both here.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="summary-text">3. Why can't I pick this bundle order?</span>
+          <span class="dropdown-arrow">›</span>
+        </summary>
+        <div class="answer">
+          <p class="placeholder">Add answer text, image, or both here.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="summary-text">4. How to request an extra driver for large orders?</span>
+          <span class="dropdown-arrow">›</span>
+        </summary>
+        <div class="answer">
+          <p class="placeholder">Add answer text, image, or both here.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="summary-text">5. How to clear old hanging/stuck orders?</span>
+          <span class="dropdown-arrow">›</span>
+        </summary>
+        <div class="answer">
+          <p class="placeholder">Add answer text, image, or both here.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="summary-text">6. How to contact support?</span>
+          <span class="dropdown-arrow">›</span>
+        </summary>
+        <div class="answer">
+          <p class="placeholder">Add answer text, image, or both here.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="summary-text">7. How to manage/pick a bundle?</span>
+          <span class="dropdown-arrow">›</span>
+        </summary>
+        <div class="answer">
+          <p class="placeholder">Add answer text, image, or both here.</p>
+        </div>
+      </details>
     </div>
 
     <div class="footer">
